@@ -1,13 +1,11 @@
 # PySleepMe (Works but abandoned)
 
-I got rid of my Dock Pro - so I don't really care aobut this project so much :)
-
+Cleaning up jeeftor's project
 
 [![pypi](https://img.shields.io/pypi/v/pysleepme.svg)](https://pypi.org/project/pysleepme/)
 [![python](https://img.shields.io/pypi/pyversions/pysleepme.svg)](https://pypi.org/project/pysleepme/)
 [![Build Status](https://github.com/jeeftor/pysleepme/actions/workflows/dev.yml/badge.svg)](https://github.com/jeeftor/pysleepme/actions/workflows/dev.yml)
 [![codecov](https://codecov.io/gh/jeeftor/pysleepme/branch/main/graphs/badge.svg)](https://codecov.io/github/jeeftor/pysleepme)
-
 
 
 Python [Sleep Me API](https://docs.developer.sleep.me/api/) Wrapper for Home Assistant Use
@@ -20,7 +18,6 @@ Python [Sleep Me API](https://docs.developer.sleep.me/api/) Wrapper for Home Ass
 
 # TODO
 
-- [ ] - Have them actually ship my order
 - [x] - Code API to query devices
 - [ ] - Code API Calls for specific device
 - [ ] - Add control logic
