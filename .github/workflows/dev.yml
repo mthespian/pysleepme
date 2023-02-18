@@ -6,21 +6,34 @@ name: dev workflow
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, main ]
+    branches: [ master, main, cleanup ]
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, main, cleanup ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "test"
+  # Job to create json list of python versions
+  get-python-versions:
+    runs-on: ubuntu-latest
+    outputs:
+      python-matrix: ${{ steps.get-python-versions-action.outputs.latest-python-versions }}
+    steps:
+    - uses: snok/latest-python-versions@v1
+      id: get-python-versions-action
+      with:
+        min-version: 3.9
+        include-prereleases: true
+
+
+  # main job called "test"
   test:
     # The type of runner that the job will run on
     strategy:
       matrix:
-        python-versions: [3.9]
+        python-versions: ${{ fromJson(needs.get-python-versions.outputs.python-matrix) }}
         os: [ubuntu-18.04, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
 
