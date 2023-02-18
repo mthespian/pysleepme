@@ -1,4 +1,4 @@
-# PySleepMe (Works but abandoned) 
+# PySleepMe (Works but abandoned)
 
 I got rid of my Dock Pro - so I don't really care aobut this project so much :)
 
@@ -32,4 +32,5 @@ The SleepMe API documentation is available [here](https://docs.developer.sleep.m
 This library then wraps those features for easier usage.
 ## Quickstart
 
-First you must get an API Token this is done somewhere:
+1. Obtain an API Token following the instructions from SleepMe's Developer Portal [usage guide](https://docs.developer.sleep.me/docs/).
+1.
