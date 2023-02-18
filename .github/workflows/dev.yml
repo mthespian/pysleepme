@@ -30,6 +30,7 @@ jobs:
 
   # main job called "test"
   test:
+    needs: [get-python-versions]
     # The type of runner that the job will run on
     strategy:
       matrix:
